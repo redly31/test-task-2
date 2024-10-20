@@ -1,0 +1,33 @@
+.home {
+    height: 70vh;
+    position: relative;
+}
+
+.home__hero {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 50%;
+    gap: 6px;
+}
+
+.home__title {
+    font-size: 25px;
+    font-weight: bold;
+    line-height: 0;
+}
+
+.home__subtitle {
+    font-size: 18px;
+    line-height: 0;
+}
+
+.home__links {
+    display: flex;
+    gap: 10px;
+}
+
+.home__links > a {
+    border: 1px solid black;
+    padding: 5px 10px;
+}

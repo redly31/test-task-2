@@ -13,11 +13,11 @@
     display: flex;
 }
 
-.header__link {
+.header__right > a {
     text-align: center;
     min-width: 60px;
 }
 
-.header__link.active {
+.header__right > a.active {
     font-weight: bold;
 }
