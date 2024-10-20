@@ -1,5 +1,17 @@
+import { Link } from "react-router-dom"
+import "./ui/home.css"
+
 export default function HomePage() {
   return (
-    <div>HomePage</div>
+    <div className="home">
+      <div className="home__hero">
+        <h1 className="home__title">Welcome</h1>
+        <h2 className="home__subtitle">This is site about cats</h2>
+        <div className="home__links">
+          <Link to="/facts">Facts about cats</Link>
+          <Link to="/facts">Cats Breeds</Link>
+        </div>
+      </div>
+    </div>
   )
 }
