@@ -1,0 +1,23 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.header__right {
+    display: flex;
+}
+
+.header__link {
+    text-align: center;
+    min-width: 60px;
+}
+
+.header__link.active {
+    font-weight: bold;
+}
