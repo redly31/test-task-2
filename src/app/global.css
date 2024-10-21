@@ -5,6 +5,10 @@ html, body, ul, li {
     padding: 0;
 }
 
+html {
+    scrollbar-gutter: stable;
+}
+
 * {
     font-family: "Roboto", sans-serif;
     font-weight: 400;
