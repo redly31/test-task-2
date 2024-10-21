@@ -1,0 +1,14 @@
+.facts__list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.fact {
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.fact__title {
+
+}
