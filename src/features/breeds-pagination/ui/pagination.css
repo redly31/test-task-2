@@ -1,0 +1,24 @@
+.pagination__controls {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pagination {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.pagination > button {
+    border: 1px solid black;
+    background-color: white;
+    cursor: pointer;
+    padding: 5px 10px 0px;
+}
+
+.limit__select {
+    border: 1px solid black;
+    padding: 5px 10px;
+}

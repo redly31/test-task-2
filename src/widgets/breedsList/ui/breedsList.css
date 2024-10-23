@@ -1,0 +1,15 @@
+.breeds__list {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.breed {
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.breed__title {
+    
+}
