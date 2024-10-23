@@ -8,7 +8,7 @@ interface Link {
   
 export interface CatFactsResponse {
     current_page: number;
-    data: Fact[];
+    data: Fact[] | never;
     first_page_url: string;
     from: number;
     last_page: number;
