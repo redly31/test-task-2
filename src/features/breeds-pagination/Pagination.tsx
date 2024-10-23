@@ -14,7 +14,6 @@ export default function Pagination() {
   const pagePlus = () => page < total ? dispatch(nextPage()) : null
   const pageMinus = () => page > 1 ? dispatch(prevPage()) : null
   const changeCurrentLimit = (currentLimit: number) => dispatch(changeLimit(currentLimit))
-  console.log(limit, page, total, data)
 
   return (
     <div className='pagination__controls'>

@@ -4,12 +4,17 @@ import { useDispatch, useSelector } from 'react-redux'
 import { factsApi } from "../entities/fact/api/factsApi";
 import { breedsApi } from "../entities/breed/api/breedsApi";
 import factsPagination from "../entities/fact/slice/factsPaginationSlice";
+import breedsPagination from "../entities/breed/slice/breedsPaginationSlice";
+import sortedBreeds from "../entities/breed/slice/breedsSortingSlice";
 
 export const store = configureStore({
   reducer: {
     [factsApi.reducerPath]: factsApi.reducer,
     [breedsApi.reducerPath]: breedsApi.reducer,
     factsPagination: factsPagination,
+    breedsPagination: breedsPagination,
+    sortedBreeds: sortedBreeds,
+
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware().concat(
