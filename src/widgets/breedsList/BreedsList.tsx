@@ -1,10 +1,14 @@
 import { useAppSelector } from "../../app/store";
 import { Breed } from "../../entities/breed/model/breed";
+import Loader from "../../shared/loader/Loader";
 import "./ui/breedsList.css";
 
 export default function FactsList() {
   const sortedBreeds = useAppSelector(state => state.sortedBreeds.sortedBreeds)
-  console.log(sortedBreeds)
+  
+  if(sortedBreeds.length === 0) {
+    return <Loader/>
+  }
 
   return <div className="breeds__list">
     {sortedBreeds.map((breed: Breed) => (

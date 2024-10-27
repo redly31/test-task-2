@@ -1,8 +1,9 @@
 import { useAppSelector } from "../../app/store";
 import { useGetFactsQuery } from "../../entities/fact/api/factsApi";
-import { Fact } from "../../entities/fact/model/fact";
+import { type Fact } from "../../entities/fact/model/fact";
 import { CatFactsResponse } from "../../entities/fact/model/factsResponse";
-import Loader from "../../widgets/loader/Loader";
+import FactItem from "../../entities/fact/ui";
+import Loader from "../../shared/loader/Loader";
 import "./ui/factslist.css";
 
 export default function FactsList() {
@@ -29,11 +30,7 @@ export default function FactsList() {
   return (
     <div className="facts__list">
       {facts.map((fact: Fact) => (
-        <div key={Math.random()} className="fact">
-          <h2 className="fact__title">
-            {fact.fact}
-          </h2>
-        </div>
+        <FactItem key={Math.random()} {...fact}/>
       ))}
     </div>
   );
