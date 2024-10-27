@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom"
-import "./ui/error.css"
+import "./error.css"
 
-export default function ErrorPage() {
+export function ErrorPage() {
   return (
     <div className="error">
       <h1 className="error__title">Error!</h1>

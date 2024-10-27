@@ -1,8 +1,8 @@
 import { createBrowserRouter } from "react-router-dom";
-import HomePage from "../pages/home/HomePage";
-import FactsPage from "../pages/facts/FactsPage";
-import BreedsPage from "../pages/breeds/BreedsPage";
-import ErrorPage from "../pages/error/ErrorPage";
+import { HomePage } from "../pages/home";
+import { FactsPage } from "../pages/facts";
+import { BreedsPage } from "../pages/breeds";
+import { ErrorPage } from "../pages/error";
 import { AppLayout } from "./layout";
 
 enum Routes {

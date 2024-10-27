@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom"
-import "./ui/home.css"
+import "./home.css"
 
-export default function HomePage() {
+export function HomePage() {
   return (
     <div className="home">
       <div className="home__hero">

@@ -1,0 +1,1 @@
+export { FactsPage } from './ui/FactsPage'
