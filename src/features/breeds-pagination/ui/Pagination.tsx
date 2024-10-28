@@ -1,15 +1,15 @@
-import { useAppDispatch, useAppSelector } from '../../app/store';
-import './ui/pagination.css'
+import { useGetBreedsQuery } from '@entities/breed/api/breedsApi';
+import { CatBreedsResponse } from '@entities/breed/model/breedsResponse';
+import { nextPage, prevPage, changeLimit } from '@entities/fact/slice/factsPaginationSlice';
+import './pagination.css'
 import { BsArrowRightShort, BsArrowLeftShort } from "react-icons/bs";
-import { changeLimit, nextPage, prevPage } from '../../entities/fact/slice/factsPaginationSlice';
-import { useGetFactsQuery } from '../../entities/fact/api/factsApi';
-import { CatFactsResponse } from '../../entities/fact/model/factsResponse';
+import { useAppSelector, useAppDispatch } from '@shared/hooks/redux';
 
-export default function Pagination() {
+export function Pagination() {
   const page = useAppSelector(state => state.factsPagination.page)
   const limit = useAppSelector(state => state.factsPagination.limit)
   const dispatch = useAppDispatch()
-  const {data} = useGetFactsQuery({limit: limit, page: page}) as { data: CatFactsResponse };
+  const {data} = useGetBreedsQuery({limit: limit, page: page}) as { data: CatBreedsResponse };
   const total = Math.ceil(data?.total / limit)
   const pagePlus = () => page < total ? dispatch(nextPage()) : null
   const pageMinus = () => page > 1 ? dispatch(prevPage()) : null

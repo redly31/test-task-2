@@ -1,12 +1,12 @@
-import { useAppSelector } from "../../app/store";
-import { useGetFactsQuery } from "../../entities/fact/api/factsApi";
-import { type Fact } from "../../entities/fact/model/fact";
-import { CatFactsResponse } from "../../entities/fact/model/factsResponse";
-import FactItem from "../../entities/fact/ui";
-import Loader from "../../shared/loader/Loader";
-import "./ui/factslist.css";
+import { Loader } from "@shared/loader";
+import "./factslist.css";
+import { FactItem } from "@entities/fact";
+import { useGetFactsQuery } from "@entities/fact/api/factsApi";
+import { Fact } from "@entities/fact/model/fact";
+import { CatFactsResponse } from "@entities/fact/model/factsResponse";
+import { useAppSelector } from "@shared/hooks/redux";
 
-export default function FactsList() {
+export function FactsList() {
   const page = useAppSelector(state => state.factsPagination.page)
   const limit = useAppSelector(state => state.factsPagination.limit)
   const {

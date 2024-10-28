@@ -1,6 +1,7 @@
-import Pagination from "../../../features/breeds-pagination/Pagination";
-import Sorting from "../../../features/breeds-sorting/Sorting";
-import BreedsList from "../../../widgets/breedsList/BreedsList";
+import { BreedsList } from "@widgets/breedsList";
+import { Pagination } from "@features/breeds-pagination";
+import { Sorting } from "@features/breeds-sorting";
+
 
 export function BreedsPage() {
   return (

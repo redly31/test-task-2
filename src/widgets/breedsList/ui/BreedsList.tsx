@@ -1,11 +1,10 @@
-import { useAppSelector } from "../../app/store";
-import { Breed } from "../../entities/breed/model/breed";
-import Loader from "../../shared/loader/Loader";
-import "./ui/breedsList.css";
+import { Breed } from "@entities/breed/model/breed";
+import "./breedsList.css";
+import { Loader } from "@shared/loader";
+import { useAppSelector } from "@shared/hooks/redux";
 
-export default function FactsList() {
+export function BreedsList() {
   const sortedBreeds = useAppSelector(state => state.sortedBreeds.sortedBreeds)
-  
   if(sortedBreeds.length === 0) {
     return <Loader/>
   }

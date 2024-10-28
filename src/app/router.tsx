@@ -1,21 +1,11 @@
 import { createBrowserRouter } from "react-router-dom";
-import { HomePage } from "../pages/home";
-import { FactsPage } from "../pages/facts";
-import { BreedsPage } from "../pages/breeds";
-import { ErrorPage } from "../pages/error";
 import { AppLayout } from "./layout";
-
-enum Routes {
-    HOME = '/',
-    FACTS = '/facts',
-    BREEDS = '/breeds',
-    ERROR = '/*',
-}
-
-export type Route = {
-    path: string,
-    element: JSX.Element,
-}
+import { BreedsPage } from "@pages/breeds";
+import { ErrorPage } from "@pages/error";
+import { FactsPage } from "@pages/facts";
+import { HomePage } from "@pages/home";
+import { Routes } from "@shared/constants/Routes";
+import { Route } from "@shared/types/Route";
 
 export const router = createBrowserRouter([
   {

@@ -1,6 +1,6 @@
-import "./ui/loader.css"
+import "./loader.css"
 
-export default function Loader() {
+export function Loader() {
   return (
     <h1 className='loader'>Loading...</h1>
   )

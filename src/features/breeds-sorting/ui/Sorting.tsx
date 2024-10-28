@@ -1,12 +1,12 @@
 import { useEffect } from "react";
-import { useAppDispatch, useAppSelector } from "../../app/store";
-import { useGetBreedsQuery } from "../../entities/breed/api/breedsApi";
-import { Breed } from "../../entities/breed/model/breed";
-import { CatBreedsResponse } from "../../entities/breed/model/breedsResponse";
-import { sortBy } from "../../entities/breed/slice/breedsSortingSlice";
-import "./ui/sorting.css";
+import "./sorting.css";
+import { useGetBreedsQuery } from "@entities/breed/api/breedsApi";
+import { Breed } from "@entities/breed/model/breed";
+import { CatBreedsResponse } from "@entities/breed/model/breedsResponse";
+import { sortBy } from "@entities/breed/slice/breedsSortingSlice";
+import { useAppSelector, useAppDispatch } from "@shared/hooks/redux";
 
-export default function Sorting() {
+export function Sorting() {
   const page = useAppSelector((state) => state.factsPagination.page);
   const limit = useAppSelector((state) => state.factsPagination.limit);
   const dispatch = useAppDispatch()

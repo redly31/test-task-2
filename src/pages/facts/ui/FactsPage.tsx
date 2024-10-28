@@ -1,5 +1,6 @@
-import Pagination from "../../../features/facts-pagination/Pagination";
-import FactsList from "../../../widgets/factsList/FactsList";
+import { Pagination } from "@features/facts-pagination";
+import { FactsList } from "@widgets/factsList";
+
 
 export function FactsPage() {
   return (
