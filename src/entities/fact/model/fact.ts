@@ -1,4 +1,4 @@
-export type Fact = {
+export interface IFact {
     fact: string;
     length: number;
 }

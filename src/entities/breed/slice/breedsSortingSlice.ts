@@ -1,8 +1,8 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { Breed } from "../model/breed";
+import { IBreed } from "../model/breed";
 
 interface BreedsState {
-    sortedBreeds: Breed[];
+    sortedBreeds: IBreed[];
 }
 
 const initialState: BreedsState = {
@@ -13,7 +13,7 @@ const breedsSortingSlice = createSlice({
     name: 'sortedBreeds',
     initialState,
     reducers: {
-        sortBy(state, action: PayloadAction<{sortType: keyof Breed, breeds: Breed[]}>) {
+        sortBy(state, action: PayloadAction<{sortType: keyof IBreed, breeds: IBreed[]}>) {
             const { sortType, breeds } = action.payload;
             if (breeds) {
                 state.sortedBreeds = [...breeds].sort((a, b) =>

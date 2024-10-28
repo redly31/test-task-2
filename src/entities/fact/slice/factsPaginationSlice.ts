@@ -1,7 +1,6 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { FactsPagination } from "../model/factsPagination";
 
-
 const factsPaginationSlice = createSlice({
     name: 'pagination',
     initialState: {

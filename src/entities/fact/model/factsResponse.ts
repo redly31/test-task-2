@@ -1,14 +1,14 @@
-import { Fact } from "./fact";
+import { IFact } from "./fact";
 
-interface Link {
+type Link = {
     url: string | null;
     label: string;
     active: boolean;
   }
   
-export interface CatFactsResponse {
+export interface FactsResponse {
     current_page: number;
-    data: Fact[] | never;
+    data: IFact[] | never;
     first_page_url: string;
     from: number;
     last_page: number;

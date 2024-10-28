@@ -1,4 +1,4 @@
-import { Breed } from "@entities/breed/model/breed";
+import { IBreed } from "@entities/breed/model/breed";
 import "./breedsList.css";
 import { Loader } from "@shared/loader";
 import { useAppSelector } from "@shared/hooks/redux";
@@ -10,7 +10,7 @@ export function BreedsList() {
   }
 
   return <div className="breeds__list">
-    {sortedBreeds.map((breed: Breed) => (
+    {sortedBreeds.map((breed: IBreed) => (
       <div key={Math.random()} className="breed">
         <h2 className="breed__title">Breed: {breed.breed !== '' ? breed.breed : "No data"}</h2>
         <h2 className="breed__title">Country: {breed.country !== '' ? breed.country : "No data"}</h2>

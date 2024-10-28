@@ -1,1 +1,1 @@
-export { FactItem } from './ui/index'
+export { Fact } from './ui/index'

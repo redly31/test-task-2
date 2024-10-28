@@ -1,6 +1,6 @@
-import { type Fact } from "../model/fact";
+import { IFact } from "../model/fact";
 
-export function FactItem(fact: Fact) {
+export function Fact(fact: IFact) {
   return (
     <div className="fact">
         <h2 className="fact__title">

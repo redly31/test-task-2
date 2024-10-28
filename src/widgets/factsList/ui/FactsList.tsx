@@ -1,9 +1,9 @@
 import { Loader } from "@shared/loader";
 import "./factslist.css";
-import { FactItem } from "@entities/fact";
+import { Fact } from "@entities/fact";
 import { useGetFactsQuery } from "@entities/fact/api/factsApi";
-import { Fact } from "@entities/fact/model/fact";
-import { CatFactsResponse } from "@entities/fact/model/factsResponse";
+import { IFact } from "@entities/fact/model/fact";
+import { FactsResponse } from "@entities/fact/model/factsResponse";
 import { useAppSelector } from "@shared/hooks/redux";
 
 export function FactsList() {
@@ -14,11 +14,11 @@ export function FactsList() {
     isLoading,
     isError,
   } = useGetFactsQuery({limit: limit, page: page}) as {
-    data: CatFactsResponse;
+    data: FactsResponse;
     isLoading: boolean;
     isError: boolean;
   };
-  const facts: Fact[] | undefined = data?.data;
+  const facts: IFact[] | undefined = data?.data;
 
   if (isLoading) {
     return <Loader />;
@@ -29,8 +29,8 @@ export function FactsList() {
 
   return (
     <div className="facts__list">
-      {facts.map((fact: Fact) => (
-        <FactItem key={Math.random()} {...fact}/>
+      {facts.map((fact: IFact) => (
+        <Fact key={Math.random()} {...fact}/>
       ))}
     </div>
   );

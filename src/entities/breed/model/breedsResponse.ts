@@ -1,14 +1,14 @@
-import { Breed } from "./breed";
+import { IBreed } from "./breed";
 
-interface Link {
+type Link = {
     url: string | null;
     label: string;
     active: boolean;
-  }
+}
   
-export interface CatBreedsResponse {
+export interface BreedsResponse {
     current_page: number;
-    data: Breed[] | never;
+    data: IBreed[] | never;
     first_page_url: string;
     from: number;
     last_page: number;
