@@ -1,5 +1,5 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
-import { CatBreedsResponse } from "../model/breedsResponse";
+import { BreedsResponse } from "../model/breedsResponse";
 
 type Pagination = {
   limit: number;
@@ -11,7 +11,7 @@ export const breedsApi = createApi({
   tagTypes: ["Breeds"],
   baseQuery: fetchBaseQuery({ baseUrl: "https://catfact.ninja/" }),
   endpoints: (build) => ({
-    getBreeds: build.query<CatBreedsResponse, Pagination>({
+    getBreeds: build.query<BreedsResponse, Pagination>({
       query: ({limit, page}) => `breeds?limit=${limit}&page=${page}`,
     })
   }),

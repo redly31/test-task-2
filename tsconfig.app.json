@@ -29,5 +29,5 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src", "src/shared/loader"]
+  "include": ["src", "src/shared/ui/loader"]
 }

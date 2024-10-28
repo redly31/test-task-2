@@ -3,12 +3,12 @@ import "./sorting.css";
 import { useGetBreedsQuery } from "@entities/breed/api/breedsApi";
 import { IBreed } from "@entities/breed/model/breed";
 import { BreedsResponse } from "@entities/breed/model/breedsResponse";
-import { sortBy } from "@entities/breed/slice/breedsSortingSlice";
+import { sortBy } from "@entities/breed/slices/breedsSortingSlice";
 import { useAppSelector, useAppDispatch } from "@shared/hooks/redux";
 
 export function Sorting() {
-  const page = useAppSelector((state) => state.factsPagination.page);
-  const limit = useAppSelector((state) => state.factsPagination.limit);
+  const page = useAppSelector((state) => state.breedsPagination.page);
+  const limit = useAppSelector((state) => state.breedsPagination.limit);
   const dispatch = useAppDispatch()
   const { data, isLoading } = useGetBreedsQuery({ limit: limit, page: page }) as {
     data: BreedsResponse;
