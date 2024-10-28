@@ -2,7 +2,7 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { BreedsPagination } from "../model/breedsPagination";
 
 const breedsPaginationSlice = createSlice({
-    name: 'pagination',
+    name: 'breedsPagination',
     initialState: {
         limit: 10,
         page: 1,
