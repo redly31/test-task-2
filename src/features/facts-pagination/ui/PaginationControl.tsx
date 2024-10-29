@@ -6,8 +6,7 @@ import Select from "./Select";
 
 export function PaginationControl() {
 
-    const page = useAppSelector((state) => state.factsPagination.page);
-    const limit = useAppSelector((state) => state.factsPagination.limit);
+  const { page, limit } = useAppSelector((state) => state.factsPagination);
     const queryArgs = { limit: limit, page: page }
     const { data } = useGetFactsQuery(queryArgs) as {data: FactsResponse}
     const total = Math.ceil(data?.total / limit);

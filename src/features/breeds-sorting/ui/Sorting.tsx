@@ -2,18 +2,15 @@ import { useEffect } from "react";
 import "./sorting.css";
 import { useGetBreedsQuery } from "@entities/breed/api/breedsApi";
 import { IBreed } from "@entities/breed/model/breed";
-import { BreedsResponse } from "@entities/breed/model/breedsResponse";
 import { sortBy } from "@entities/breed/slices/breedsSortingSlice";
 import { useAppSelector, useAppDispatch } from "@shared/hooks/redux";
+import { BreedsQueryResponse } from "@entities/breed/model/breedsQueryResponse";
 
 export function Sorting() {
-  const page = useAppSelector((state) => state.breedsPagination.page);
-  const limit = useAppSelector((state) => state.breedsPagination.limit);
   const dispatch = useAppDispatch()
-  const { data, isLoading } = useGetBreedsQuery({ limit: limit, page: page }) as {
-    data: BreedsResponse;
-    isLoading: boolean;
-  };
+  const { page, limit } = useAppSelector((state) => state.breedsPagination);
+  const queryArgs = {limit: limit, page: page}
+  const { data, isLoading } = useGetBreedsQuery(queryArgs) as BreedsQueryResponse;
   const breeds = data?.data
 
   useEffect(() => {
